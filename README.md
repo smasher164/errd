@@ -57,7 +57,7 @@ func writeToGS(ctx context.Context, bucket, dst string, r io.Reader) (err error)
         } else {
             err = w.Close()
         }
-    }
+    }()
     _, err = io.Copy(w, r)
     return err
 }
